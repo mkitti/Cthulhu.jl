@@ -874,6 +874,7 @@ with the option to `descend` into intermediate calls. `kwargs` are passed to [`d
 """
 ascend
 
+#=
 using PrecompileTools
 @setup_workload begin
     input = Base.link_pipe!(Pipe(), reader_supports_async=true, writer_supports_async=true)
@@ -885,5 +886,6 @@ using PrecompileTools
         close(input.in)
     end
 end
+=#
 
 end
